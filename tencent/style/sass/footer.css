@@ -1,0 +1,84 @@
+#footer h1 {
+  padding-left: 0;
+  margin-bottom: 32px;
+  border-right: 1px solid #999999;
+  display: block;
+  font-size: 17px;
+  color: white;
+}
+
+#footer h1 a {
+  color: white;
+}
+
+#footer p {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: #999999;
+}
+
+#footer p a {
+  color: #999999;
+}
+
+#footer .footer {
+  background: #3F3F3F;
+}
+
+#footer .footer .foot-cont {
+  height: 272px;
+}
+
+#footer .footer .foot-cont > div {
+  width: 109px;
+  height: 158px;
+  margin-left: 28px;
+}
+
+#footer .footer .foot-cont .hands {
+  margin: 0;
+}
+
+#footer .footer .foot-cont .deal > h1 {
+  border: 0;
+}
+
+#footer .footer .foot-cont .QR-code {
+  width: 149px;
+  margin: 0;
+}
+
+#footer .footer .foot-cont .contact {
+  width: 361px;
+  margin: 0;
+}
+
+#footer .footer .foot-cont .contact h1 {
+  border: 0;
+}
+
+#footer .footer .foot-cont .contact h1 a {
+  text-decoration: underline;
+}
+
+#footer .footer .foot-cont .contact p:nth-child(2) {
+  font-size: 14px;
+}
+
+#footer .footer .foot-cont .contact p span:nth-child(2) a {
+  font-size: 17px;
+  text-decoration: underline;
+}
+
+#footer .copyright {
+  background: #2c2b2c;
+}
+
+#footer .copyright p {
+  height: 50px;
+  font-size: 17px;
+  width: 100%;
+  text-align: center;
+  line-height: 50px;
+  color: white;
+}

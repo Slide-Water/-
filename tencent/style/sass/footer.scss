@@ -1,0 +1,75 @@
+//footer
+#footer{
+    h1{
+        padding-left: 0;
+        margin-bottom: 32px;
+        border-right: 1px solid rgb(153,153,153);
+        display: block;
+        font-size: 17px;
+        color: rgb(255,255,255);
+        a{
+             color: rgb(255,255,255);
+        }
+    }
+    p{
+        font-size: 15px;
+        margin-bottom: 5px;
+        color: rgb(153,153,153);
+        a{
+           color:rgb(153,153,153)
+        }
+    }
+    .footer {
+        background: #3F3F3F;
+        .foot-cont{
+            height: 272px;
+        }
+         .foot-cont > div{
+                width: 109px;
+                height: 158px;
+                margin-left: 28px;
+         }
+         .foot-cont .hands{
+              margin: 0;
+         }
+         .foot-cont .deal > h1{
+             border: 0;
+         }
+         .foot-cont .QR-code{
+             width: 149px;
+             margin: 0;
+         }
+         .foot-cont .contact{
+             width: 361px;
+             margin: 0;
+             h1{
+                 border: 0;
+                 a{
+                    text-decoration: underline
+                 }
+             }
+             p:nth-child(2){
+                 font-size: 14px;
+             }
+             p{
+                 span:nth-child(2){
+                    a{
+                        font-size: 17px;
+                        text-decoration: underline
+                    } 
+                 }
+             }
+         }
+    }
+.copyright{
+    background: rgb(44,43,44);
+    p{
+        height: 50px;
+        font-size: 17px;
+        width: 100%;
+        text-align: center;
+        line-height: 50px;
+        color: rgb(255,255,255);
+    }
+  }   
+}
