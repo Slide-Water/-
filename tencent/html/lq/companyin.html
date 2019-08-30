@@ -7,11 +7,13 @@
     <title>Document</title>
     <script src="../../js/Component/jquery.min.js"></script>
     <script src="../../js/Component/bootstrap.min.js"></script>
+    <script src="../../layui/layui.js"></script>
     <link rel="stylesheet" href="../../style/css/bootstrap.min.css" />
     <link rel="stylesheet" href="../../style/sass/pubic.min.css" />
     <link rel="stylesheet" href="../../style/sass/head.min.css">
     <link rel="stylesheet" href="../../style/sass/footer.min.css">
     <link rel="stylesheet" href="../../style/lq/companyin.min.css" />
+    <link rel="stylesheet" href="../../layui/css/layui.css">
   </head>
   <body>
     <div id="head"></div>
@@ -86,7 +88,13 @@
               <div class="sumit1">
                 <label for="">LOGO提交</label><span>*</span>
               </div>
-              <div class="pic-give"></div>
+              <div class="pic-give">
+                <button type="button" class="layui-btn" id="test1">上传图片<tton>
+                  <div class="layui-upload-list">
+                    <img class="layui-upload-img" id="demo1">
+                    <p id="demoText"></p>
+                  </div>              
+              </div>
             </div>
             <div>
               <div class="sumit2">
@@ -137,7 +145,7 @@
             </div>
           </div>
           <div class="approve-pub">
-            <div>
+            <div class="approve-pub-word toib">
               <div class="toib title-wh send-id">
                 <label for="">上传手持身份证明</label><span>*</span>
               </div>
