@@ -7,6 +7,12 @@
 // })
 let username = $('input[type="text"]');
 let password = $('input[type="password"]');
+import {getAjax} from "../Component/ajax.js";
+
+var taskOne = getAjax('GET', 'http://127.0.0.1:8080/us', {username:username.val(),password:password.val()});
+
+
+
 $('button').click(function(){ 
     Promise.all([
         $.ajax({
@@ -41,3 +47,5 @@ $('button').click(function(){
  // Promise.all('')
 //}//601token五分钟过期,带上refresh,覆盖token
  //602失效，refresh，登录(跳转登录)
+
+
