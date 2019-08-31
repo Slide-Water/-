@@ -1,7 +1,6 @@
 let username = $('input[name="username"]');
 let password = $('input[name="password"]');
 let re_password = $('input[name="re_password"]');
-
 $('button').click(function(){ 
     console.log(username.val(),password.val(),re_password.val(),$('input[name="role"]:checked').val())
     Promise.all([

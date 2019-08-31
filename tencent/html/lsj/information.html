@@ -49,10 +49,16 @@
             <!-- 人才入驻 -->
             <div class="row clearfix show rc">
                 <div class="col-md-12 title d-flex align-items-center">
-                    <h1>1.基本信息</h1>
+                    <h1><i class="iconfont xx">&#xe600;</i>基本信息</h1>
                 </div>
-                <div class="col-md-12">
+                <div class="col-md-12 information">
                     <div class="title-content">
+                        <div class="t-account">
+                            <div class="ib">
+                                <span>账号<i>*</i></span>
+                                <input type="text" disabled>
+                            </div>
+                        </div>
                         <div class="t-name">
                             <div class="left ib">
                                 <span>姓名<i>*</i></span>
@@ -66,45 +72,97 @@
                         <div class="t-date">
                             <div class="left ib">
                                 <span>出生日期<i>*</i></span>
-                                <input type="text" id="startTime" >
+                                <input type="text" id="startTime">
                             </div>
                             <div class="right ib">
-                                <span>开始工作年份<i>*</i></span>
+                                <span>身份证号<i>*</i></span>
                                 <input type="text" id="startTime1">
                             </div>
                         </div>
                         <div class="t-contach">
                             <div class="left ib">
-                                <span>手机<i>*</i></span>
-                                <input type="text">
-                            </div>
-                            <div class="right ib">
-                                <span>居住地<i>*</i></span>
+                                <span>联系电话<i>*</i></span>
                                 <input type="text">
                             </div>
                         </div>
                         <div class="t-email">
                             <div class="left ib">
-                                <span>邮箱<i>*</i></span>
-                                <input type="text">
+                                <span>学历<i>*</i></span>
+                                <form class="layui-form" action="">
+                                    <div class="layui-input-inline">
+                                        <select name="quiz1">
+                                            <option value="">请选择省</option>
+                                            <option value="浙江" selected="">浙江省</option>
+                                            <option value="你的工号">江西省</option>
+                                            <option value="你最喜欢的老师">福建省</option>
+                                        </select>
+                                    </div>
+                                    <div class="layui-input-inline">
+                                        <select name="quiz2">
+                                            <option value="">请选择市</option>
+                                            <option value="杭州">杭州</option>
+                                            <option value="宁波" disabled="">宁波</option>
+                                            <option value="温州">温州</option>
+                                            <option value="温州">台州</option>
+                                            <option value="温州">绍兴</option>
+                                        </select>
+                                    </div>
+                                    <div class="layui-input-inline">
+                                        <select name="quiz3">
+                                            <option value="">请选择县/区</option>
+                                            <option value="西湖区">西湖区</option>
+                                            <option value="余杭区">余杭区</option>
+                                            <option value="拱墅区">临安市</option>
+                                        </select>
+                                    </div>
+                                </form>
                             </div>
                         </div>
-                        <div class="t-income">
-                            <div class="left ib">
-                                <span>目前年收入<i>*</i></span>
-                                <input type="text">
+                        <div class="t-education">
+                                <div class="left ib">
+                                    <span>居中地区<i>*</i></span>
+                                    <form class="layui-form" action="">
+                                        <div class="layui-input-inline">
+                                            <select name="quiz1">
+                                                <option value="">请选择省</option>
+                                                <option value="浙江" selected="">浙江省</option>
+                                                <option value="你的工号">江西省</option>
+                                                <option value="你最喜欢的老师">福建省</option>
+                                            </select>
+                                        </div>
+                                        <div class="layui-input-inline">
+                                            <select name="quiz2">
+                                                <option value="">请选择市</option>
+                                                <option value="杭州">杭州</option>
+                                                <option value="宁波" disabled="">宁波</option>
+                                                <option value="温州">温州</option>
+                                                <option value="温州">台州</option>
+                                                <option value="温州">绍兴</option>
+                                            </select>
+                                        </div>
+                                        <div class="layui-input-inline">
+                                            <select name="quiz3">
+                                                <option value="">请选择县/区</option>
+                                                <option value="西湖区">西湖区</option>
+                                                <option value="余杭区">余杭区</option>
+                                                <option value="拱墅区">临安市</option>
+                                            </select>
+                                        </div>
+                                    </form>
+                                </div>
                             </div>
-                            <div class="right ib">
-                                <span>万元</span>
+                        <div class="title-img">
+                            <div class="layui-upload">
+                                <div class="layui-upload-list">
+                                    <img class="layui-upload-img" id="demo1">
+                                    <p id="demoText"></p>
+                                </div>
+                                <button type="button" class="layui-btn" id="test1">上传头像</button>
                             </div>
                         </div>
                     </div>
-                    <div class="title-img">
-                        
-                    </div>
-                </div>
                 <div class="col-md-12 title d-flex align-items-center">
-                    <h1>2.求职意向</h1>
+                    <h1> <i class="iconfont xx">&#xe762;</i> 求职意向</h1>
                 </div>
                 <div class="col-md-12">
                     <div class="title-content job">
@@ -180,6 +238,7 @@
                         </div>
                     </div>
                 </div>
+            </div>
             </div>
             <!-- 我的工作 -->
             <div class="row clearfix gz ">
@@ -471,7 +530,6 @@
         </div>
         <div id="footer"></div>
         <script src="../../js/lsj/information.js"></script>
-        <script src="../../js/lsj/date.js"></script>
 </body>
 
 </html>

@@ -204,16 +204,12 @@
   margin-top: 18px;
 }
 .id-card {
-  margin-top:23px;
   border: 1px solid;
   @include wh(330, 205);
 }
 .id-card1 {
+  margin-left: 148px;
   margin-right: 12px;
-}
-.approve-pub-word{
-  position: relative;
-  bottom: 193px;
 }
 //提交信息按钮
 .btn-mess {
@@ -377,7 +373,6 @@
   border-bottom: 1px solid #fff;
 }
 .part{
-  margin-top:19px;
   display: none;
 }
 .show{

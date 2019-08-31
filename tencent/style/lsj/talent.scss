@@ -59,11 +59,31 @@ label{
     @include margin(19px,18px);
     background: #EFEAEA;
     height: 74px;
+    h1{
+        font-weight: 300;
+        color: #1D9CCB;
+        .xx{
+        font-size: 30px;
+        padding: 0px 10px;
+        }
+    }
 }
-
+.information{
+    position: relative;
+}
+.title-img{
+    position: absolute;
+    top: 0;
+    right: 15%;
+    .layui-upload-img{
+            width: 92px;
+            height: 92px;
+    }
+}
+.layui-laydate-main{
+    width: 248px;
+}
 .title-content{
-    width: 70%;
-    display: inline-block;
     input[type=text]{
         width: 248px;
         height: 28px;
@@ -90,6 +110,12 @@ label{
     }
     .right{
         padding-left: 20px;
+    }
+    .layui-form{
+        display: inline-block;
+        input{
+            //width: 100px;
+        }
     }
 }
 .t-income{

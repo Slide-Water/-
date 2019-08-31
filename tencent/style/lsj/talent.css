@@ -55,9 +55,33 @@ label {
   height: 74px;
 }
 
-.title-content {
-  width: 70%;
-  display: inline-block;
+.title h1 {
+  font-weight: 300;
+  color: #1D9CCB;
+}
+
+.title h1 .xx {
+  font-size: 30px;
+  padding: 0px 10px;
+}
+
+.information {
+  position: relative;
+}
+
+.title-img {
+  position: absolute;
+  top: 0;
+  right: 15%;
+}
+
+.title-img .layui-upload-img {
+  width: 92px;
+  height: 92px;
+}
+
+.layui-laydate-main {
+  width: 248px;
 }
 
 .title-content input[type=text] {
@@ -88,6 +112,10 @@ label {
 
 .title-content .right {
   padding-left: 20px;
+}
+
+.title-content .layui-form {
+  display: inline-block;
 }
 
 .t-income .right span {
