@@ -103,10 +103,16 @@
     @include wh(348, 101);
     resize: none;
   }
-  .apt-check textarea {
+  .apt-check .apt-check-send {
+    display: inline-block;
     @include wh(348, 149);
     resize: none;
     cursor: pointer;
+    border: 1px solid #efeaea;
+    i{
+      display: block;
+      text-align: center;
+    }
   }
   select {
     appearance: none;
@@ -115,6 +121,7 @@
     border: 1px solid #efeaea;
     outline: none;
     @include wh(111, 36);
+    background:url(../../image/图标/企业下拉菜单.png) no-repeat right;
   }
   .sect {
     width: 149px;
@@ -165,9 +172,25 @@
   width: 127px;
 }
 .pic-give {
-  display: inline-block;
+  border: 1px solid #d5d3d3 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include wh(142, 134);
   @include bd(black);
+  .send-logo{
+    @include wh(52,52);
+    position: relative;
+    outline: none;
+    background:url(../../image/logo与图片素材/上传拷贝.png);
+    span{
+      font-size:12px;
+      color: #666666;
+      position: absolute;
+      bottom: -20px;
+      left:-13px;
+    }
+  }
 }
 .mess-right > div {
   display: flex;
@@ -203,13 +226,40 @@
 .approve-pub:nth-child(2) {
   margin-top: 18px;
 }
-.id-card {
-  border: 1px solid;
-  @include wh(330, 205);
+.id-card-box{
+  @include wh(686, 205);
+  margin-left: 153px;
+  display: flex;
+  justify-content: space-between;
+  margin-top:-20px;
 }
-.id-card1 {
-  margin-left: 148px;
-  margin-right: 12px;
+.id-card {
+  border: 1px solid #d0cfcf;
+  position: relative;
+  @include wh(330, 205);
+  .send-myhead{
+    width:10px;
+    height: 10px;
+    button{
+      @include wh(140,158);
+      background:url(../../image/logo与图片素材/id_Positive-0a929d430bd699a8c02fcd76927b6398b43a74f4e21e463f7fd53dda69129f20.png) no-repeat;
+      position: absolute;
+      top:24px;
+      left:81px;
+      outline: none;
+      span{
+        font-size:12px;
+        color:#d0cfcf;
+        position: absolute;
+        bottom:-50px;
+        left:0;
+      }
+    }
+  }
+}
+.send-myhead2{
+  @extend .send-myhead;
+  background: url(../../image/logo与图片素材/id_opposite-70c360ee0ac3d755fa37fcde02c59ff70eede5dbbe724e59dac2ca1a156fb7f4.png) no-repeat;
 }
 //提交信息按钮
 .btn-mess {
@@ -255,11 +305,41 @@
   height: 251px;
   background-color: #efeaea;
   border-radius: 10px;
+  img{
+    width:71px;
+    margin:33px 0 16px 102px;
+  }
+  p{
+    font-size:12px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
 }
 .part3-right2 {
+  overflow: hidden;
   margin-top: 17px;
-  @extend .part3-right1;
+  background-color: #efeaea;
   height: 182px;
+  width: 274px;
+  .contact-comp1{
+    margin-left:35px;
+    color:#666666;
+    margin-top:15px;
+    h3{
+      font:700 18px "microsoft yhei";
+    }
+    p{
+      font-size: 12px;
+    }
+    .toib p:nth-child(1){
+      font: 700 24px "microsoft yahei";
+    }
+    .toib:nth-of-type(1){
+      font-size: 40px;
+      position: relative;
+      top:-10px;
+    }
+  }
 }
 .my-pro {
   margin-top: 19px;
@@ -348,10 +428,7 @@
   label {
     padding-right: 5px;
   }
-  input{
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+  button{
     @include wh(185,36);
     background-color:#477eba;
   }
@@ -373,6 +450,7 @@
   border-bottom: 1px solid #fff;
 }
 .part{
+  margin-top:22px;
   display: none;
 }
 .show{

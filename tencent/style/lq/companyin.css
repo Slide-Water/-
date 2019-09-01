@@ -1,3 +1,4 @@
+@charset "UTF-8";
 .toib {
   display: inline-block;
 }
@@ -104,11 +105,18 @@
   resize: none;
 }
 
-.mess-left-bottom .apt-check textarea {
+.mess-left-bottom .apt-check .apt-check-send {
+  display: inline-block;
   width: 348px;
   height: 149px;
   resize: none;
   cursor: pointer;
+  border: 1px solid #efeaea;
+}
+
+.mess-left-bottom .apt-check .apt-check-send i {
+  display: block;
+  text-align: center;
 }
 
 .mess-left-bottom select {
@@ -119,6 +127,7 @@
   outline: none;
   width: 111px;
   height: 36px;
+  background: url(../../image/图标/企业下拉菜单.png) no-repeat right;
 }
 
 .mess-left-bottom .sect {
@@ -182,10 +191,29 @@
 }
 
 .pic-give {
-  display: inline-block;
+  border: 1px solid #d5d3d3 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 142px;
   height: 134px;
   border: 1px solid black;
+}
+
+.pic-give .send-logo {
+  width: 52px;
+  height: 52px;
+  position: relative;
+  outline: none;
+  background: url(../../image/logo与图片素材/上传拷贝.png);
+}
+
+.pic-give .send-logo span {
+  font-size: 12px;
+  color: #666666;
+  position: absolute;
+  bottom: -20px;
+  left: -13px;
 }
 
 .mess-right > div {
@@ -226,15 +254,47 @@
   margin-top: 18px;
 }
 
+.id-card-box {
+  width: 686px;
+  height: 205px;
+  margin-left: 153px;
+  display: flex;
+  justify-content: space-between;
+  margin-top: -20px;
+}
+
 .id-card {
-  border: 1px solid;
+  border: 1px solid #d0cfcf;
+  position: relative;
   width: 330px;
   height: 205px;
 }
 
-.id-card1 {
-  margin-left: 148px;
-  margin-right: 12px;
+.id-card .send-myhead, .id-card .send-myhead2 {
+  width: 10px;
+  height: 10px;
+}
+
+.id-card .send-myhead button, .id-card .send-myhead2 button {
+  width: 140px;
+  height: 158px;
+  background: url(../../image/logo与图片素材/id_Positive-0a929d430bd699a8c02fcd76927b6398b43a74f4e21e463f7fd53dda69129f20.png) no-repeat;
+  position: absolute;
+  top: 24px;
+  left: 81px;
+  outline: none;
+}
+
+.id-card .send-myhead button span, .id-card .send-myhead2 button span {
+  font-size: 12px;
+  color: #d0cfcf;
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+}
+
+.send-myhead2 {
+  background: url(../../image/logo与图片素材/id_opposite-70c360ee0ac3d755fa37fcde02c59ff70eede5dbbe724e59dac2ca1a156fb7f4.png) no-repeat;
 }
 
 .btn-mess {
@@ -282,16 +342,54 @@
   width: 891px;
 }
 
-.part3-right1, .part3-right2 {
+.part3-right1 {
   width: 274px;
   height: 251px;
   background-color: #efeaea;
   border-radius: 10px;
 }
 
+.part3-right1 img {
+  width: 71px;
+  margin: 33px 0 16px 102px;
+}
+
+.part3-right1 p {
+  font-size: 12px;
+  text-align: center;
+  margin-bottom: 16px;
+}
+
 .part3-right2 {
+  overflow: hidden;
   margin-top: 17px;
+  background-color: #efeaea;
   height: 182px;
+  width: 274px;
+}
+
+.part3-right2 .contact-comp1 {
+  margin-left: 35px;
+  color: #666666;
+  margin-top: 15px;
+}
+
+.part3-right2 .contact-comp1 h3 {
+  font: 700 18px "microsoft yhei";
+}
+
+.part3-right2 .contact-comp1 p {
+  font-size: 12px;
+}
+
+.part3-right2 .contact-comp1 .toib p:nth-child(1) {
+  font: 700 24px "microsoft yahei";
+}
+
+.part3-right2 .contact-comp1 .toib:nth-of-type(1) {
+  font-size: 40px;
+  position: relative;
+  top: -10px;
 }
 
 .my-pro {
@@ -399,10 +497,7 @@
   padding-right: 5px;
 }
 
-.pic-paper input {
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
+.pic-paper button {
   width: 185px;
   height: 36px;
   background-color: #477eba;
@@ -426,6 +521,7 @@
 }
 
 .part {
+  margin-top: 22px;
   display: none;
 }
 

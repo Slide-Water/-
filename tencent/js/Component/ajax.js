@@ -1,5 +1,5 @@
 function getAjax(type, url, data){
-    return new Promise.all([
+    return  Promise.all([
         $.ajax({
           url: url,
           type: type,
