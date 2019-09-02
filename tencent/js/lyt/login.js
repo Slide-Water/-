@@ -1,35 +1,21 @@
-// var list_ = $('.login-list').find('li');
-// var none_ = $('.login-none').find('li');
-// list_.click(function () {
-//     $(this).addClass('login-li').siblings().removeClass('login-li');
-//     var index = $(this).index();
-//     none_.eq(index).addClass('show').siblings().removeClass('show');
-// })
-let username = $('input[type="text"]');
-let password = $('input[type="password"]');
 import {getAjax} from "../Component/ajax.js";
 
-var taskOne = getAjax('GET', 'http://127.0.0.1:8080/us', {username:username.val(),password:password.val()});
-
-
-
+let username = $('input[type="text"]');
+let password = $('input[type="password"]');
 $('button').click(function(){ 
-    Promise.all([
-        $.ajax({
-          url: "http://10.1.0.81:8000/user/api/token/",
-          type: "POST",
-          data:{
-            username:username.val(),
-            password:password.val()
-          }
-        })
-      ]).then(
+  var taskOne = getAjax('post', 'http://10.2.2.247:8000/user/api/token/', {username:username.val(),password:password.val()});
+  taskOne.then(
         resolve => {
-
-          console.log(resolve)
-
-          //  sessionStorage.setItem('token1',resolve[0].data.refresh,resolve[0].data.access,resolve[0].data.role)
-           //location.href='../lq/companyin.html'
+          console.log(resolve[0].data)
+          // sessionStorage.setItem("key",{
+          //   "access":resolve[0].data.access,
+          //   "refresh":resolve[0].data.refresh,
+          //   "role":resolve[0].data.role
+          // })
+          sessionStorage.setItem('access',resolve[0].data.access),
+          sessionStorage.setItem('refresh',resolve[0].data.refresh),
+          sessionStorage.setItem('role',resolve[0].data.role)
+          //location.href='../../html/demo.html'
         },
         reject => {
           console.log(reject);

@@ -13,12 +13,13 @@ $(function () {
     //简易封装layui
     Layui('upload','#test1');
     Layui('laydate','#startTime');
-    Layui('form')
-})
+    Layui('form');
+
+}) 
 
 
 
-
+console.log($('.xg'))
 
 
 export {click};
