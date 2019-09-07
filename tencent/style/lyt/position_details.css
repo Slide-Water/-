@@ -41,7 +41,7 @@ ul {
 
 .position-head .position-cont .position-dist div:nth-child(3) ul li {
   margin-top: 10px;
-  width: 25%;
+  width: 35%;
   font-size: 18px;
   color: #666666;
 }
@@ -107,7 +107,7 @@ ul {
 }
 
 .position-details .num-1 {
-  width: 300px;
+  width: 320px;
   margin-top: -94px;
 }
 
@@ -116,24 +116,19 @@ ul {
   color: #333333;
 }
 
-.position-details .num-1 .ico-head {
+.position-details .num-1 .position-lin {
+  width: 300px;
+  height: 100px;
+}
+
+.position-details .num-1 .position-lin .ico-head {
   font-size: 67px;
   color: #999999;
 }
 
-.position-details .num-1 .ico-head span:nth-child(1) {
+.position-details .num-1 .position-lin span {
   font-size: 18px;
   color: #666666;
-  vertical-align: text-top;
-}
-
-.position-details .num-1 .ico-head span:nth-child(2) {
-  margin-left: -136px;
-}
-
-.position-details .num-1 .ico-head span:nth-child(2), .position-details .num-1 .ico-head span:nth-child(3) {
-  font-size: 16px;
-  color: #999999;
 }
 
 .position-details .num-2 {
@@ -154,11 +149,6 @@ ul {
 
 .position-details .num-2 span:nth-child(4) i, .position-details .num-2 span:nth-child(6) i {
   font-size: 28px;
-}
-
-.position-details .num-2 span:nth-child(4) i {
-  margin-left: 10px;
-  margin-right: 13px;
 }
 
 .position-details .num-2 .position-num span {
@@ -213,4 +203,8 @@ ul {
 .position-details .position-map {
   width: 770px;
   height: 266px;
+}
+
+.mar-bo {
+  margin-bottom: 150px;
 }

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/Component/jquery.min.js"></script>
+    <script src="../js/Component/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="../style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/css/iconfont.css">
+    <link rel="stylesheet" href="../style/sass/head.min.css">
+    <link rel="stylesheet" href="../style/sass/footer.min.css">
+    <link rel="stylesheet" href="../style/sass/pubic.min.css">
+    <link rel="stylesheet" href="../style/lyt/position_details.min.css">
+    <title>建筑公司_详情页</title>
+</head>
+<body>
+    <div id="head"></div>
+    <div class="position-head">
+        <div class="position-cont">
+            <div class="position-dist">
+                <div><span>施工员</span></div>
+                <div><span>6千-8千</span></div>
+                <div>
+                    <ul>
+                        <li>成都</li>
+                        <li>招5人</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="position-btn">
+                <input type="button" value="收藏">
+                <input type="button" value="申请职位">
+            </div>
+        </div>
+    </div>
+    <div class="position-bg">
+        <div class="position-details">
+            <div class="position-tit">
+                <span>职位亮点</span>
+                <div class="position-bor"></div>
+            </div>
+            <div>
+                <ul>
+                    <li>绩效</li>
+                    <li>奖金</li>
+                    <li>包吃</li>
+                    <li>包住</li>
+                    <li>餐补</li>
+                    <li>交通补助</li>
+                    <li>定期体检</li>
+                    <li>五险一金</li>
+                </ul>
+            </div>
+            <div class="position-right num-1">
+                <div>
+                    <span>职位发布者</span>
+                </div>
+                <div class="position-lin">
+                    <i class="iconfont ico-head">&#xe623;</i>
+                    <span>HR / 人事经理</span>
+                </div>
+            </div>
+        </div>
+        <div class="position-details">
+            <div class="position-tit">
+                <span>职位描述</span>
+                <div class="position-bor"></div>
+            </div>
+            <div>
+                <ol>
+                    <li>1、参与施工组织管理策划，参与制定管理制度，参与图纸会审、技术核定；</li>
+                    <li>2、负责施工作业班组的技术交底；</li>
+                    <li>3、负责组织测量放线、参与技术复核；</li>
+                    <li>4、参与做好施工现场组织协调工作，合理调配生产资源；落实施工作业计划；</li>
+                    <li>5、负责施工作业的质量过程控制，参与隐蔽、分项、分部和单位工程的质量验收；</li>
+                    <li>6、参与质量问题的调查，提出整改措施并监督落实；</li>
+                    <li>7、负责编写施工日志、施工记录等相关施工资料；</li>
+                    <li>8、负责汇总、整理和移交施工资料。</li>
+                </ol>
+                
+            </div>
+            <div class="position-right num-2">
+                <div style="height: 74px;width: 104px; background-color: blue;">图片</div>
+                <span>中建三局第一建设工程有限责任公司北京分公司</span><hr>
+                <span><i class="iconfont">&#xe606;</i>1000-9000人</span><hr>
+                <div class="position-num">
+                    <span>中建三局第一建设工程有限责任公司北京分公司成立2001年，区域总部地处北京辐射哈尔滨、天津、青岛、郑州、兰州一线以北，海外辐射南亚的斯里兰卡、马尔代夫等地区，下设青岛、天津两个城市公司现年合约额已...</span>
+                    <span>公司主页</span>
+                </div>
+            </div>
+        </div>
+        <div class="position-details">
+            <div class="position-tit">
+                <span>任职要求</span>
+                <div class="position-bor"></div>
+            </div>
+            <div>
+                <ol>
+                    <li>1、本科以上学历，工民建、土木工程或建筑管理相关专业；</li>
+                    <li>2、初级以上职称，持有相关证书；</li>
+                    <li>3、有2年以上建筑施工企业现场管理工作经验。</li>
+                </ol>
+            </div>
+        </div>
+        <div class="position-details mar-bo">
+            <div class="position-tit">
+                <span>工作地点</span>
+                <div class="position-bor"></div>
+            </div>
+            <div class="position-site">
+                <span>北京</span>
+                <span>查看地图</span>
+                <i class="iconfont">&#xe608;</i>
+            </div>
+            <div id="container" class="position-map"></div>
+        </div>
+        <div style="height: 50px"></div>
+    </div>
+    <div id="footer"></div>
+    <script src="https://a.amap.com/jsapi_demos/static/demo-center/js/demoutils.js"></script>
+    <script type="text/javascript"
+        src="https://webapi.amap.com/maps?v=1.4.15&key=6645124594566824eea79fc08e4511b2"></script>
+    <script>
+        //初始化地图插件
+        var map = map = new AMap.Map('container', {
+            resizeEnable: true,
+            viewMode: '3D'
+        });
+        map.on("complete", function () {
+            log.success("地图加载完成！");
+        });
+    </script>
+    <script  type="module" src="../js/js/position_details.js"></script>
+</body>
+</html>

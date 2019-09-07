@@ -26,9 +26,16 @@
   @include bd(#000);
   margin: 0 auto;
 }
+//权限
+.container > p{
+  height: 500px;
+  text-align: center;
+  line-height: 500px;
+  font-size: 30px;
+}
 //二级导航
 .sec-banner {
-  @include wh(1190, 51);
+  @include wh(1190, 52);
   border-bottom: 1px solid #0090c5;
   // border:none;
   box-sizing: border-box;
@@ -93,6 +100,10 @@
       }
     }
   }
+  .com_scale{
+    width:252px;
+    height: 36px;
+  }
 }
 .mess-left-bottom {
   width: 496px;
@@ -103,10 +114,16 @@
     @include wh(348, 101);
     resize: none;
   }
-  .apt-check textarea {
+  .apt-check .apt-check-send {
+    display: inline-block;
     @include wh(348, 149);
     resize: none;
     cursor: pointer;
+    border: 1px solid #efeaea;
+    i{
+      display: block;
+      text-align: center;
+    }
   }
   select {
     appearance: none;
@@ -115,6 +132,7 @@
     border: 1px solid #efeaea;
     outline: none;
     @include wh(111, 36);
+    background:url(../../image/图标/企业下拉菜单.png) no-repeat right;
   }
   .sect {
     width: 149px;
@@ -165,9 +183,20 @@
   width: 127px;
 }
 .pic-give {
-  display: inline-block;
+  border: 1px solid #d5d3d3 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   @include wh(142, 134);
   @include bd(black);
+  background:url(../../image/logo与图片素材/上传拷贝.png) no-repeat center;
+  img{
+    @include wh(142,134);
+  }
+  .layui-upload-list{
+    width: 100%;
+    height: 100%;
+  }
 }
 .mess-right > div {
   display: flex;
@@ -176,10 +205,13 @@
 //负责人认证
 .approve {
   @extend .mess;
-  margin-top: 22px;
+  margin-top: 260px;
   border-bottom: 1px dashed #d5d3d3;
   input {
     @include wh(252, 36);
+  }
+  .id-card-3{
+    margin-top:15px;
   }
 }
 .approve-nav {
@@ -203,13 +235,49 @@
 .approve-pub:nth-child(2) {
   margin-top: 18px;
 }
-.id-card {
-  border: 1px solid;
-  @include wh(330, 205);
+.id-card-box{
+  @include wh(686, 205);
+  margin-left: 153px;
+  display: flex;
+  justify-content: space-between;
+  margin-top:-20px;
 }
-.id-card1 {
-  margin-left: 148px;
-  margin-right: 12px;
+.id-card {
+  border: 1px solid #d0cfcf;
+  position: relative;
+  @include wh(330, 205);
+  .send-myhead{
+    width:10px;
+    height: 10px;
+    img{
+      @include wh(330,205);
+    }
+    button{
+      @include wh(140,158);
+      background:url(../../image/logo与图片素材/id_Positive-0a929d430bd699a8c02fcd76927b6398b43a74f4e21e463f7fd53dda69129f20.png) no-repeat;
+      position: absolute;
+      top:24px;
+      left:81px;
+      outline: none;
+      span{
+        font-size:12px;
+        color:#d0cfcf;
+        position: absolute;
+        bottom:-50px;
+        left:0;
+      }
+    }
+  }
+}
+#test3{
+  background: url(../../image/logo与图片素材/id_opposite-70c360ee0ac3d755fa37fcde02c59ff70eede5dbbe724e59dac2ca1a156fb7f4.png) no-repeat;
+}
+.intro-ab{
+  margin-top:15px;
+  span{
+    position: absolute;
+    left: 117px;
+  }
 }
 //提交信息按钮
 .btn-mess {
@@ -227,13 +295,7 @@
   display: flex;
   justify-content: space-between;
 }
-.pro-box {
-  width: 890px;
-  height: 40px;
-  font: 18px "microsoft yahei";
-  display: flex;
-  justify-content: space-between;
-}
+
 .pro-box span {
   flex: 1;
 }
@@ -255,15 +317,41 @@
   height: 251px;
   background-color: #efeaea;
   border-radius: 10px;
+  img{
+    width:71px;
+    margin:33px 0 16px 102px;
+  }
+  p{
+    font-size:12px;
+    text-align: center;
+    margin-bottom: 16px;
+  }
 }
 .part3-right2 {
+  overflow: hidden;
   margin-top: 17px;
-  @extend .part3-right1;
+  background-color: #efeaea;
   height: 182px;
-}
-.my-pro {
-  margin-top: 19px;
-  border: solid 1px #d0cfcf;
+  width: 274px;
+  .contact-comp1{
+    margin-left:35px;
+    color:#666666;
+    margin-top:15px;
+    h3{
+      font:700 18px "microsoft yhei";
+    }
+    p{
+      font-size: 12px;
+    }
+    .toib p:nth-child(1){
+      font: 700 24px "microsoft yahei";
+    }
+    .toib:nth-of-type(1){
+      font-size: 40px;
+      position: relative;
+      top:-10px;
+    }
+  }
 }
 .pro-blank {
   flex: 1;
@@ -306,33 +394,11 @@
     width: 185px;
     margin-right: 156px;
   }
-}
-.cell-num {
-  input {
-    width: 185px;
+  select{
+    @include wh(221,36);
   }
-  input:nth-of-type(2) {
-    width: 102px;
-    margin-left: 9px;
-  }
-  .send-check {
-    display: inline-block;
-    width: 90px;
-    height: 36px;
-    margin-left: 9px;
-    background-color: #477eba;
-    line-height: 36px;
-    text-align: center;
-    color: #fff;
-  }
-}
-.qq-num {
-  margin: 17px 0 26px;
-  label {
-    padding-right: 39px;
-  }
-  input {
-    width: 185px;
+  select:nth-of-type(1){
+    margin-right: 156px;
   }
 }
 .type-check {
@@ -348,19 +414,9 @@
   label {
     padding-right: 5px;
   }
-  input{
-    appearance: none;
-    -moz-appearance: none;
-    -webkit-appearance: none;
+  button{
     @include wh(185,36);
     background-color:#477eba;
-  }
-  .pic-paper-word{
-    position: absolute;
-    top: 472px;
-    font-size: 12px;
-    vertical-align: bottom;
-    color:#999;
   }
 }
 .btn-mess2{
@@ -368,13 +424,95 @@
 }
 
 //写tab切换的样式
-.active{
-  @include bd(#477eba);
+
+.part{
+  margin-top:22px;
+}
+.borderBlue{
+  border: 1px solid #477eba;
   border-bottom: 1px solid #fff;
 }
-.part{
-  display: none;
+
+// 内容2
+.sc{
+  border-bottom: 1px solid rgb(229,225,225);
+  h1{
+      font-size: 25px;
+      color: rgb(71,126,186); 
+  }
 }
-.show{
-  display: block;
+
+  .sc-title,.sc-info{
+      margin-top: 12px;
+      height: 30px;
+      display: flex;
+      background: #efeaea;
+      p,a{
+          text-align: center;
+          line-height: 30px;
+          font-size: 15px;
+      }
+      .sc-bh{
+          width: 200px;
+          font-size: 15px;
+          margin-left: 18px;
+          input[type=checkbox]{
+              margin-right: 22px;
+              width: 16px;
+              height: 16px;
+              border: 1px solid #999999;
+          }
+      }
+      .sc-j{
+          flex: 1;
+      }
+      .sc-xg{
+          width: 300px;
+          text-align: center;
+          a{
+              padding: 0 5px;
+          }
+      }
+  }
+  .sc-title > div{
+      display: inline-block;
+  }
+
+.sc-info{
+  background: none;
 }
+.sc-content{
+  .sc-c{
+      @include wh(39px,36px);
+  }
+}
+ .sc-foot{
+  background: #efeaea;
+     height: 44px;
+     .sc-left{
+          font-size: 15px;
+          margin-left: 18px;
+         input[type=checkbox]{
+             margin-right: 22px;
+             width: 16px;
+             height: 16px;
+             border: 1px solid #999999;
+         }
+
+  }
+     .sc-right{
+         margin-right: 49px;
+         input[type=button]{
+          width: 156px;
+          height: 30px;
+          background-color: #477eba;
+          outline: none;
+          border: 0;
+          color: #fff;
+          text-align: center;
+         }
+         input:nth-child(1){
+             margin-right: 45px;
+         }
+     }
+ }

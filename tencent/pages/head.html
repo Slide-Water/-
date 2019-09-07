@@ -1,0 +1,111 @@
+<div class="container-fluid site-topbar">
+    <div class="container">
+        <div class="row clearfix topbar-cont">
+            <div class="col-md-6 column">
+                <a class="iconfont" style="color: red">&#xe697;</a>
+                <a href="" class="region">全国</a>
+            </div>
+            <div class="col-md-6 column text-lg-right">
+                   <a href="javascript:void();" class="sign">登录</a>
+                    <i class="line">|</i>
+                    <a href="./pages/register.html" class="logon">免费注册</a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid site-header">
+    <div class="container"> 
+        <div class="row clearfix search-nav">
+            <div class="d-flex align-items-end logo-cont">
+                <div class="logo">
+                    <a href=""></a>
+                </div>
+            </div>
+            <div class="search-cont d-flex align-items-center">
+                <div class="row clearfix">
+                    <div class="col-md-12 column header-search">
+                        <div>
+                            <div class="search">
+                                <span class="iconfont s-ico">&#xe615;</span>
+                            <input type="text" placeholder="输入关键词" name="" id="" class="search-txt" /><input type="button" value="搜索" class="search-btn">
+                        </div>
+                        <div class="issue">
+                            <input type="button" value="快速发布任务" class="issue-btn">
+                        </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container-fluid site-nav">
+    <div class="container">
+        <ul class="nav nav-pills justify-content-between nav-list">
+            <li><a href="./index.html" class="home">首页</a></li>
+            <li><a href="./pages/information.html"  class="talens">人才服务</a></li>
+            <li><a href="./pages/companyin.html" class="firm">企业服务</a></li>
+            <li><a href="#">材料服务</a></li>
+            <li><a href="#">工程标准</a></li>
+            <li><a href="#">其他服务</a></li>
+        </ul>
+    </div>
+</div>
+
+
+<script>
+    var url = location.href;
+    console.log($('.search-txt').val())
+    console.log($('.search-txt').val())
+    if(sessionStorage.getItem('role')){
+        $(".sign").remove();
+        $(".logon").remove();
+        $(".text-lg-right").eq(0).html(`<a href="javascript:void();" class="welcome">欢迎! ${sessionStorage.getItem('username')}</a><i class="line">|</i><a href="#" class="exit">退出</a>`)
+    }
+
+
+    if(url.search("index") != -1){
+        $(".sign").click(function(){
+            location.href = './pages/login.html';
+        })
+        $('.logon').click(function(){
+            location.href = './pages/register.html';
+        })
+        $('.search-btn').click(function(){
+            if($('.search-txt').val() == '' || $('.search-txt').val() == undefined || $('.search-txt').val() == null){
+                alert('请输入')
+            }else{
+                sessionStorage.setItem('search',$('.search-txt').val())
+                location.href = './pages/search.html'
+            }
+            
+        })
+    }
+    else{
+        $('.home').attr('href','../index.html'); 
+        $('.talens').attr('href','./information.html');
+        $('.firm').attr('href','./companyin.html'); 
+        $(".sign").click(function(){
+            location.href = './login.html';
+        })
+        $('.logon').click(function(){
+            location.href = './register.html';
+        })
+        $('.search-btn').click(function(){
+            if($('.search-txt').val() == '' || $('.search-txt').val() == undefined || $('.search-txt').val() == null){
+                alert('请输入')
+            }else{
+                sessionStorage.setItem('search',$('.search-txt').val())
+                location.href = './search.html'
+            }
+            
+        })
+    }
+
+    $('.exit').click(function(){
+        sessionStorage.clear();
+        location.reload() 
+    })
+
+
+</script>

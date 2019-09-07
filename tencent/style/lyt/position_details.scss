@@ -35,7 +35,7 @@ ul {
             }
             div:nth-child(3) ul li {
                 margin-top: 10px;
-                width: 25%;
+                width: 35%;
                 font-size: 18px;
                 color: #666666;
             }
@@ -94,28 +94,25 @@ ul {
         float: right;
     }
     .num-1 {
-        width: 300px;
+        width: 320px;
         margin-top: -94px;
         div span {
             font-size: 22px;
             color: #333333;
         }
-        .ico-head {
-            font-size: 67px;
-            color: #999999;
-            span:nth-child(1){
-                font-size: 18px;
-                color: #666666;
-                vertical-align: text-top;
-            }
-            span:nth-child(2) {
-                margin-left: -136px;
-            }
-            span:nth-child(2),span:nth-child(3) {
-                font-size: 16px;
+        .position-lin {
+            width: 300px;
+            height: 100px;
+            .ico-head {
+                font-size: 67px;
                 color: #999999;
             }
+            span {
+                font-size: 18px;
+                color: #666666;
+            }
         }
+        
     }
     .num-2 {
         width: 270px;
@@ -131,10 +128,6 @@ ul {
             i {
                 font-size: 28px;
             }
-        }
-        span:nth-child(4) i {
-            margin-left: 10px;
-            margin-right: 13px;
         }
         .position-num span {
             font-size: 16px;
@@ -182,4 +175,7 @@ ul {
         width: 770px;
 	    height: 266px;
     }
+}
+.mar-bo {
+    margin-bottom: 150px;
 }

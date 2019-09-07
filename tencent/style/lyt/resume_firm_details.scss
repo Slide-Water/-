@@ -1,0 +1,87 @@
+@mixin margin($left,$right) {
+    margin-left: $left;
+    margin-right: $right;
+}
+
+* {
+    font-family: MicrosoftYaHei;
+	font-weight: normal;
+	font-stretch: normal;
+    letter-spacing: 0px;
+}
+.resume-bg {
+    background-color: #F5F5F5;
+    .resume-details {
+        margin: 0 auto;
+        width: 1120px;
+        .resume-tit {
+            width: 791px;
+            margin-bottom: 35px;
+            padding-top: 50px;
+            span {
+                font-size: 24px;
+                color: #333333;
+            }
+            .resume-bor {
+                width: 860px;
+                margin-left: 160px;
+                border-bottom: 1px solid #efeaea;
+            }
+        }
+        .resume-name {
+            .resume-head {
+                height: 160px;
+                width: 126px;
+                float: right;
+                margin-right: 155px;
+            }
+            .layout {
+                font-size: 16px;
+                letter-spacing: 0.2px;
+	            color: #42413f;
+                padding: 25px;
+                span:nth-child(1) {
+                    margin: 0;
+                }
+                span {
+                    margin-left: 100px;
+                }
+                .resume-a {
+                    margin-top: 20px;
+                    margin-bottom: 20px;
+                }
+                .resume-g {
+                    margin: 0;
+                }
+                .resume-books {
+                    width: 347px;
+	                height: 149px;
+                }
+            }
+            .resume-none {
+                display: none;
+            }
+            
+            
+        }
+    }
+    .resume-btn {
+        text-align: center;
+        input {
+            border: none;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            margin: 60px 90px;
+            cursor: pointer;
+            -webkit-transition-duration: 0.4s;
+            transition-duration: 0.4s;
+            width: 268px;
+            height: 56px;
+            background-color: #477eba;
+            border-radius: 10px;
+            font-size: 26px;
+            color: #ffffff;
+        }
+    }
+}
