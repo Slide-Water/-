@@ -16,6 +16,10 @@
     height: $height;
  }
 //公共样式
+
+
+
+
 h1{
     padding-left: 18px;
     font-size: 22px;
@@ -27,10 +31,23 @@ h1{
 label{
     margin: 0;
 }
+
+
+
+//权限
+.power{
+    height: 500px;
+    font-size: 30px;
+    text-align: center;
+    p{
+        text-align: center;
+    }
+}
 .ad{
     height: 80px;
     .advertising{
-        background: blue;
+        background:url(../../image/logo与图片素材/头图.png) no-repeat center center;
+        background-size: 100%;
     }
 }
 .toggle_cont > div{
@@ -70,34 +87,50 @@ label{
 }
 .information{
     position: relative;
+    #demo2{
+        width: 142px;
+        height: 134px;
+    }
+}
+.t-education{
+    position: absolute;
+    top: 0;
+    right: 3%;
 }
 .title-img{
     position: absolute;
     top: 0;
-    right: 15%;
+    right: 20%;
     .layui-upload-img{
             width: 92px;
             height: 92px;
     }
+    .layui-btn{
+        background: #1D9CCB;
+    }
 }
 .layui-laydate-main{
     width: 248px;
+}
+#test2{
+    background: url(../../image/logo与图片素材/上传拷贝.png)no-repeat center center;
+    background-size:50%;
 }
 .title-content{
     input[type=text]{
         width: 248px;
         height: 28px;
     }
-    input[type=button]{
+    input[type=button],.t-name > .ib > button{
         text-align: center;
          width: 104px;
          height: 28px;
          //background: #477EBA;
          outline: 0;
          border: 1px solid #EFEAEA;
-         background: #1D9CCB;
          color: #fff;
     }
+    
     span{
         width: 100px;
         display: inline-block;
@@ -113,8 +146,23 @@ label{
     }
     .layui-form{
         display: inline-block;
-        input{
-            //width: 100px;
+        div:nth-child(3){
+            input[type=text]{
+                width: 120px;
+            }
+        }
+    }
+    .bg-color{
+        background: #1D9CCB;
+    } 
+}
+.layui-input-block{
+    margin-left: 0 !important;
+}
+.t-contach{
+    .right{
+        input[type=text]{
+            width: 100px;
         }
     }
 }
@@ -129,40 +177,18 @@ label{
     display: inline-block;
 }
 .t-pay{
-    .right-txt{
-        .str{
-            width: 107px;
-        }
-        .num{
-            width: 227px;
-        }
-        .drop-down{
-            height: 28px;
-            border:1px solid #EFEAEA;
-            outline: none;
-            /*去掉默认的下拉三角*/
-            appearance:none;  
-            -moz-appearance:none;  
-            -webkit-appearance:none;
-            /*添加下拉三角图标*/
-            background: url("../../image/20180903162343300.jfif") no-repeat right center transparent;
-        }
-        span{
-            width: 30px;
-            padding: 0;
-            text-align: center;
-        }
-        span:nth-child(4){
-            width: 35px;
-        }
-        span:nth-child(5){
-            width: 62px;
-            font-size: 12px;
-            a{
-                color: red;
+      .layui-form{
+            .layui-input-inline:nth-child(1){
+                input[type=text]{
+                    width: 116px;
+                }
             }
-        }
-    }
+            .layui-input-inline:nth-child(2){
+                input[type=text]{
+                    width: 258px;
+                }
+            }
+      }
 }
 .job{
     .right-txt{
@@ -257,7 +283,8 @@ label{
     }
     .xg{
         span{
-            @include padding_zy(5px,5px)
+            @include padding_zy(5px,5px);
+            cursor:pointer;
         }
     }
     .dh , .ne{

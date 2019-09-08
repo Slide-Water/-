@@ -14,12 +14,23 @@ label {
   margin: 0;
 }
 
+.power {
+  height: 500px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.power p {
+  text-align: center;
+}
+
 .ad {
   height: 80px;
 }
 
 .ad .advertising {
-  background: blue;
+  background: url(../../image/logo与图片素材/头图.png) no-repeat center center;
+  background-size: 100%;
 }
 
 .toggle_cont > div {
@@ -69,10 +80,21 @@ label {
   position: relative;
 }
 
+.information #demo2 {
+  width: 142px;
+  height: 134px;
+}
+
+.t-education {
+  position: absolute;
+  top: 0;
+  right: 3%;
+}
+
 .title-img {
   position: absolute;
   top: 0;
-  right: 15%;
+  right: 20%;
 }
 
 .title-img .layui-upload-img {
@@ -80,8 +102,17 @@ label {
   height: 92px;
 }
 
+.title-img .layui-btn {
+  background: #1D9CCB;
+}
+
 .layui-laydate-main {
   width: 248px;
+}
+
+#test2 {
+  background: url(../../image/logo与图片素材/上传拷贝.png) no-repeat center center;
+  background-size: 50%;
 }
 
 .title-content input[type=text] {
@@ -89,13 +120,12 @@ label {
   height: 28px;
 }
 
-.title-content input[type=button] {
+.title-content input[type=button], .title-content .t-name > .ib > button {
   text-align: center;
   width: 104px;
   height: 28px;
   outline: 0;
   border: 1px solid #EFEAEA;
-  background: #1D9CCB;
   color: #fff;
 }
 
@@ -118,6 +148,22 @@ label {
   display: inline-block;
 }
 
+.title-content .layui-form div:nth-child(3) input[type=text] {
+  width: 120px;
+}
+
+.title-content .bg-color {
+  background: #1D9CCB;
+}
+
+.layui-input-block {
+  margin-left: 0 !important;
+}
+
+.t-contach .right input[type=text] {
+  width: 100px;
+}
+
 .t-income .right span {
   text-align: left;
 }
@@ -126,43 +172,12 @@ label {
   display: inline-block;
 }
 
-.t-pay .right-txt .str {
-  width: 107px;
+.t-pay .layui-form .layui-input-inline:nth-child(1) input[type=text] {
+  width: 116px;
 }
 
-.t-pay .right-txt .num {
-  width: 227px;
-}
-
-.t-pay .right-txt .drop-down {
-  height: 28px;
-  border: 1px solid #EFEAEA;
-  outline: none;
-  /*去掉默认的下拉三角*/
-  appearance: none;
-  -moz-appearance: none;
-  -webkit-appearance: none;
-  /*添加下拉三角图标*/
-  background: url("../../image/20180903162343300.jfif") no-repeat right center transparent;
-}
-
-.t-pay .right-txt span {
-  width: 30px;
-  padding: 0;
-  text-align: center;
-}
-
-.t-pay .right-txt span:nth-child(4) {
-  width: 35px;
-}
-
-.t-pay .right-txt span:nth-child(5) {
-  width: 62px;
-  font-size: 12px;
-}
-
-.t-pay .right-txt span:nth-child(5) a {
-  color: red;
+.t-pay .layui-form .layui-input-inline:nth-child(2) input[type=text] {
+  width: 258px;
 }
 
 .job .right-txt input[type=text] {
@@ -269,6 +284,7 @@ label {
 .cont .xg span {
   padding-left: 5px;
   padding-right: 5px;
+  cursor: pointer;
 }
 
 .cont .dh, .cont .ne {

@@ -62,6 +62,21 @@ ul {
   color: #000000;
 }
 
+.search-list .search-neir ul li:nth-child(8) {
+  width: 20%;
+}
+
+.search-list .power {
+  height: 500px;
+  font-size: 30px;
+  text-align: center;
+}
+
+.search-list .power p {
+  text-align: center;
+  line-height: 200px;
+}
+
 .search-list .tit {
   background-color: #477EBA;
 }

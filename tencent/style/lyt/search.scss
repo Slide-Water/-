@@ -54,6 +54,18 @@ ul {
                 font-size: 14px;
                 color: #000000;
             }
+            li:nth-child(8){
+                width: 20%;
+            }
+        }
+    }
+    .power{
+        height: 500px;
+        font-size: 30px;
+        text-align: center;
+        p{
+            text-align: center;
+            line-height: 200px;
         }
     }
     .tit {

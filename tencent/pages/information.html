@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="../js/Component/jquery.min.js"></script>
+    <script src="../js/Component/bootstrap.min.js"></script>
+    <script src="../layui/layui.all.js"></script>
+    <link rel="stylesheet" href="../style/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../style/sass/pubic.min.css">
+    <link rel="stylesheet" href="../style/css/iconfont.css">
+    <link rel="stylesheet" href="../style/lsj/talent.css">
+    <link rel="stylesheet" href="../style/sass/footer.min.css">
+    <link rel="stylesheet" href="../style/sass/head.min.css">
+    <link rel="stylesheet" href="../layui/css/layui.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="head"></div>
+    <div id="main">
+        <div class="container">
+            <div class="row clearfix banner">
+                <div class="col-md-12 column ad">
+                    <div class="advertising h-100">
+                        <!-- <img src="../image/logo与图片素材/头图.jpg" alt="" style="width: 100%;height: 100%;"> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <ul class="nav nav-tabs justify-content-between nav-list">
+                <li class="active"><a href="#">人才入驻</a></li>
+                <li><a href="#">我的工作</a></li>
+                <li><a href="#">岗前培训</a></li>
+                <li><a href="#">技能提升</a></li>
+                <li><a href="#">安全中心</a></li>
+                <li><a href="#">更多</a></li>
+            </ul>
+        </div>
+        <div class="container toggle_cont">
+            <!-- 人才入驻 -->
+            <div class="row clearfix show rc">
+                <div class="col-md-12 title d-flex align-items-center">
+                    <h1><i class="iconfont xx">&#xe600;</i>基本信息</h1>
+                </div>
+                <form  method="POST" enctype="multipart/form-data" id="form_data" class="layui-form">
+                <div class="col-md-12 information" >
+                    <div class="title-content">
+                        <div class="t-account">
+                            <div class="ib">
+                                <span>账号<i>*</i></span>
+                                <input type="text" disabled name="username">
+                            </div>
+                        </div>
+                        <div class="t-name">
+                            <div class="left ib">
+                                <span>姓名<i>*</i></span>
+                                <input type="text" name="name" lay-verify="required">
+                            </div>
+                            <div class="right ib">
+                                <span>性别<i>*</i></span>
+                                <div class="layui-form layui-input-block">
+                                    <input type="radio" name="sex" value="1" title="男" >
+                                    <input type="radio" name="sex" value="0" title="女">   
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t-date">
+                            <div class="left ib">
+                                <span>出生日期<i>*</i></span>
+                                <input type="text" id="startTime" name="date" lay-verify="required|date">
+                            </div>
+                            <div class="right ib">
+                                <span>学历<i>*</i></span>
+                                    <div class="layui-input-inline layui-form">
+                                        <select name="quiz1">
+                                            <option value="" selected="">请选择</option>
+                                            <option value="0">小学</option>
+                                            <option value="1">初中</option>
+                                            <option value="2">高中</option>
+                                            <option value="3">大专</option>
+                                            <option value="4">其他</option>
+                                        </select>
+                                    </div>
+                            </div>
+                        </div>
+                        <div class="t-contach">
+                            <div class="left ib">
+                                <span>联系电话<i>*</i></span>
+                                <input type="text" name="telephone" lay-verify="required|phone|number">
+                            </div>
+                            <div class="right ib">
+                                <span>居中地区<i>*</i></span>
+                                <div class="layui-form" >
+                                    <div class="layui-input-inline">
+                                        <select name="city1" lay-filter="test1">
+                                            <option value="0">请选择省</option>
+                                        </select>
+                                    </div>
+                                    <div class="layui-input-inline">
+                                        <select name="city2" lay-filter="test2">
+                                            <option value="0">请选择市</option>
+                                        </select>
+                                    </div>
+                                    <div class="layui-input-inline">
+                                        <select name="city3" lay-filter="test3">
+                                            <option value="0">请选择县/区</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="t-idCard">
+                            <div class="left ib">
+                                <span>身份证号<i>*</i></span>
+                                <input type="text" name="identity_card" lay-verify=”required|identity”>
+                            </div>
+                            <div class="right ib">
+                                <span>详细地址<i>*</i></span>
+                                <input type="text" name="detailed_address">
+                            </div>
+                        </div>
+                        <div class="t-education">
+                                <div class="layui-upload pic-give">
+                                        <div class="layui-upload-list" id="test2">
+                                            <a href="javacript:" title="上传资质图片">
+                                    <img class="layui-upload-img" id="demo2">
+                                </a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="title-img">
+                            <div class="layui-upload">
+                                <div class="layui-upload-list">
+                                    <img class="layui-upload-img" id="demo1">
+                                    <p id="demoText"></p>
+                                </div>
+                                <button type="button" class="layui-btn" id="test1">上传头像</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-12 title d-flex align-items-center">
+                        <h1> <i class="iconfont xx">&#xe762;</i> 求职意向</h1>
+                    </div>
+                    <div class="col-md-12">
+                        <div class="title-content job">
+                            <div class="t-pay">
+                                <div class="left ib">
+                                    <span>期望薪资<i>*</i></span>
+                                    <div class="layui-form" >
+                                        <div class="layui-input-inline">
+                                            <select name="quiz2">
+                                                <option value="" selected="">薪资类型</option>
+                                                <option value="0">时薪</option>
+                                                <option value="1">日薪</option>
+                                                <option value="2">月薪</option>
+                                            </select>
+                                        </div>
+                                        <input type="text" name="exp_salary ">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="t-site">
+                                <div class="left ib">
+                                    <span>工种<i>*</i></span>
+                                </div>
+                                <div class="right-txt">
+                                    <input type="text" name="type_of_work_id" >
+                                </div>
+                            </div>
+                            <div class="t-post">
+                                <div class="left ib">
+                                    <span>当前状态<i>*</i></span>
+                                </div>
+                                <div class="right-txt">
+                                        <div class="layui-form">
+                                                <div class="layui-input-inline">
+                                                    <select name="quiz3">
+                                                        <option value="" selected="">请选择</option>
+                                                        <option value="0">在职</option>
+                                                        <option value="1">离职</option>
+                                                        <option value="2">观望中</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="t-post">
+                                <div class="left ib">
+                                    <span>工作年限<i>*</i></span>
+                                </div>
+                                <div class="right-txt">
+                                    <div class="layui-form">
+                                                <div class="layui-input-inline">
+                                                    <select name="quiz4">
+                                                        <option value="" selected="">请选择</option>
+                                                        <option value="0">无经验</option>
+                                                        <option value="1">一年以内</option>
+                                                        <option value="2">1-3年</option>
+                                                        <option value="3">3-5年</option>
+                                                        <option value="4">5-10年</option>
+                                                        <option value="5">10年以上</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="t-tmt">
+                                <div class="left ib">
+                                    <span>合作模式<i>*</i></span>
+                                </div>
+                                <div class="right-txt">
+                                        <div class="layui-form" >
+                                                <div class="layui-input-inline">
+                                                    <select name="quiz5" lay-filter='cooperation'>
+                                                        <option value="" selected="">请选择</option>
+                                                        <option value="0">工人</option>
+                                                        <option value="1">包工头</option>
+                                                    </select>
+                                                </div>
+                                            </div>
+                                </div>
+                            </div>
+                            <div class="t-person">
+                            </div>
+                            <div class="t-facility">
+                            </div>
+                            <div class="t-btn">
+                                <input type="button" value="提交"" id="create" lay-submit lay-filter="create">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+            </div>
+            <!-- 我的工作 -->
+            <div class="row clearfix gz ">
+                <div class="col-md-12 column d-flex align-items-center">
+                    <div class="hello">
+                        
+                    </div>
+                </div>
+                <div class="col-md-12 column d-flex jl">     
+                </div>
+                <div class="col-12 column sq-nav">
+                    <ul class="nav nav-tabs">
+                        <li><a href="javascricp:void(0)">我的申请</a></li>
+                        <li><a href="javascricp:void(0)">我的收藏</a></li>
+                    </ul>
+                    <div class="sq-cont d-flex align-items-center justify-content-center flex-column">
+                        <i></i>
+                        <p>暂无社会申请记录，为你推荐匹配职位 <a href="javascricp:void(0)">立即查看</a></p>
+                    </div>
+                </div>
+                <div class="sc-cont">
+                    <div class="sc-title">
+                        <div class="sc-bh">
+                            <p>编号</p>
+                        </div>
+                        <div class="sc-j">
+                            <div class="d-flex justify-content-around">
+                                <p>岗位名称</p>
+                                <p>公司名称</p>
+                                <p>薪水类型</p>
+                                <p>薪水范围</p>
+                                <p>工作地区</p>
+                            </div>
+                        </div>
+                        <div class="sc-xg">
+                            <a href="javascricp:void(0)">查看</a>
+                            <a href="javascricp:void(0)">删除</a>
+                            <a href="javascricp:void(0)">状态</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-content">
+                    <div class="sc-c">
+                        <div class="sc-info">
+                            <div class="sc-bh">
+                                <label><input name="all" type="checkbox" value="" class="all" />编号</label>
+                            </div>
+                            <div class="sc-j">
+                                <div class="d-flex justify-content-around">
+                                    <p>岗位名称</p>
+                                    <p>公司名称</p>
+                                    <p>薪水类型</p>
+                                    <p>薪水范围</p>
+                                    <p>工作地区</p>
+                                </div>
+                            </div>
+                            <div class="sc-xg">
+                                <a href="javascricp:void(0)">查看</a>
+                                <a href="javascricp:void(0)">删除</a>
+                                <a href="javascricp:void(0)">状态</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="sc-foot d-flex justify-content-between align-items-center">
+                    <div class="sc-left">
+                        <label><input name="all" type="checkbox" value="" class="all" />全选</label>
+                    </div>
+                    <div class="sc-right">
+                        <input type="button" value="删除">
+                        <input type="button" value="申请">
+                    </div>
+                </div>
+            </div>
+            <!-- 岗前培训 -->
+            <div class="row clearfix px">
+                <img src="../image/123.png" alt="" style="height: 500px; width: 100%;margin: 30px 0;">
+            </div>
+            <!-- 技能提升 -->
+            <div class="row clearfix jn">
+                <img src="../image/1567072587(1).jpg" alt=""  style="height: 500px; width: 100%;margin: 30px 0;">
+            </div>
+            <!-- 安全中心 -->
+            <div class="row clearfix aq">
+                <div class="col-md-12 title-aq d-flex align-items-center">
+                    <h1>安全中心</h1>
+                </div>
+                <div class="col-md-12 email_tip">
+                    <p><i>?</i>你的邮箱尚未验证。为了你账户的安全,建议你立即<a href="javascricp:void(0)">验证邮箱</a>！</p>
+                </div>
+                <div class="col-md-12 column">
+                    <div class="row clearfix">
+                        <div class="column cont-name cont d-flex justify-content-between align-items-center">
+                            <div class="bt">
+                                <span></span>
+                                <span class=ne>用户名</span>
+                            </div>
+                            <div class="zh">
+                                <p class="dh"></p>
+                            </div>
+                            <div class="xg">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="column cont-pass cont cont d-flex justify-content-between align-items-center">
+                            <div class="bt">
+                                <span></span>
+                                <span class=ne>登录密码</span>
+                            </div>
+                            <div class="zh">
+                                <p class="dh">*********</p>
+                            </div>
+                            <div class="xg">
+                                <span>修改</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="column cont-phone cont cont d-flex justify-content-between align-items-center">
+                            <div class="bt">
+                                <span></span>
+                                <span class=ne>手机</span>
+                            </div>
+                            <div class="zh">
+                                <p class="dh"><span>151</span>****<span>4822</span></p>
+                            </div>
+                            <div class="xg">
+                                <span>修改</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row clearfix">
+                        <div class="column cont-email cont cont d-flex justify-content-between align-items-center">
+                            <div class="bt">
+                                <span></span>
+                                <span class=ne>邮箱</span>
+                            </div>
+                            <div class="zh">
+                                <p class="dh"><span>26</span>***<span>@qq.com</span><span></span></p>
+                            </div>
+                            <div class="xg">
+                                <span>修改</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 更多 -->
+            <div class="row clearfix gd">
+                <p>敬请期待</p>
+            </div>
+        </div>
+        <div id="footer"></div>
+        <script type="module" src="../js/js/information.js"></script>
+</body>
+
+</html>
