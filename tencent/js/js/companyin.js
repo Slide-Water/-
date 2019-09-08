@@ -1,6 +1,15 @@
 import {img_send, tuo_img, file_send, date, form,get_address_json} from "../Component/module.js";
 import {getAjax,getAjax1} from "../Component/ajax.js";
 import {str1,str2,str3,str4,str5,str6} from "../Component/content.js";
+// 工人
+var role=sessionStorage.role;
+if(role === "0" ||role===""){
+  $(".ad").remove();
+  $(".sec-banner").remove();
+  $("section").remove();
+  $("#head").after('<div class="container"><p>不好意思！您没有权限访问</p></div>')
+}
+if(role === "1"){
 $(function() {
   var role = sessionStorage.role;
   //工人
@@ -354,3 +363,4 @@ $("body").on("click",".send-myhead button",function(){
 //  function myPutAjax1(form2){
   
 //  }
+}

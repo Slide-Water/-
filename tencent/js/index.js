@@ -52,6 +52,9 @@ getAjax1('GET', 'developers/home_page_developers_demand_num/').then(
           <div class="for_btn">
             
             <a href="javascript:void(0)" class="in_page" value=${resolve[0].data[j].id}><img src="${resolve[0].data[j].company_img}" /></a>
+
+            <a href="#" class="in_page"><img src="${resolve[0].data[j].company_img}" /></a>
+
           </div>
     
           <div class="students_star">
@@ -73,6 +76,7 @@ getAjax1('GET', 'developers/home_page_developers_demand_num/').then(
           scale:0.9
       })
       //setTimeout(aa,10000)
+
       $('.in_page').click(function(){
         var role = sessionStorage.role;
         if(role == 1){
@@ -86,6 +90,7 @@ getAjax1('GET', 'developers/home_page_developers_demand_num/').then(
           alert('请登录')
         }
       })
+
       },
       reject => {
         console.log(reject);
@@ -103,8 +108,10 @@ getAjax1('GET', 'developers/home_page_developers_demand_num/').then(
         <li class="poster-item  zturn-item">
               
         <div class="for_btn">
-          
+        
           <a href="javascript:viod(0)" class="in_page1" value=${resolve[0].data[j].id}><img src="image/2222.png" /></a>
+
+          <a href="#" class="in_page"><img src="image/2222.png" /></a>
         </div>
   
         <div class="students_star">
@@ -136,6 +143,7 @@ getAjax1('GET', 'developers/home_page_developers_demand_num/').then(
         location.href = './pages/firm_details.html'
       }
     })
+    
     },
     reject => {
       console.log(reject);
@@ -160,6 +168,7 @@ getAjax1('GET', 'developers/home_page_developers_demand_num/').then(
     
           <div class="progress-talk">
               <a href="javascript:vodi(0)" value=${resolve[0].data[0].id}>
+              <a href="javascript:void(0);" value=${resolve[0].data[0].id}>
               <p class="zuo">￥${resolve[0].data[0].demand_job}</p>
               <p class="zhong">${resolve[0].data[0].project_type}</p>
               <p class="you">${resolve[0].data[0].project_state}</p>

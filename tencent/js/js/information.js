@@ -13,7 +13,6 @@ $(function () {
             $(".toggle_cont").remove();
             $(".nav-list").remove();    
             $(".container").eq(1).after('<div class="container power"><p>不好意思！您没有权限访问</p></div>')
-
         }
         //工人
         else if (role == 0) {
@@ -22,13 +21,12 @@ $(function () {
                  resolve=>{
                      console.log(resolve)
                      if(resolve[0].code == 200){
-                         //简历
-                        resume(resolve[0].data)
-
                         var idx = sessionStorage.getItem("index");
                         li_.eq(idx).addClass('active').siblings().removeClass('active');
                         show.eq(idx).addClass('show').siblings().removeClass('show');
 
+                         //简历
+                        resume(resolve[0].data)
                      }else if(resolve[0].code == 404){
                         
                      }
@@ -50,8 +48,6 @@ $(function () {
 let li_ = $('.nav-list').find('li');
 let show = $('.toggle_cont > div');
 //调用tab切换
-
-
 $('.t-name .right').find('button').click(function () {
     $(this).addClass('bg-color').siblings().removeClass('bg-color');
 })
@@ -61,8 +57,8 @@ img_send("#test2", "#demo2")
 date('#startTime')
 //tab切换
 
-
 click(li_, show)
+
 
 //省市联动
 form()
